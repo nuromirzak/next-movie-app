@@ -1,0 +1,54 @@
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #1b1b1b;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.poster {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+    color: white;
+}
+
+.altTitle {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0 0 0.5rem;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #888;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.ratingItem {
+    display: flex;
+    align-items: center;
+}

@@ -1,3 +1,22 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "arrow-body-style": ["error", "always"],
+    "arrow-parens": ["error", "always"],
+    "curly": ["error", "all"],
+    "eqeqeq": ["error", "always"],
+    "import/no-default-export": "error",
+    "quotes": ["error", "double", { "allowTemplateLiterals": true }],
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": ["error", "always"],
+    "eol-last": ["error", "always"]
+  },
+  "overrides": [
+    {
+      "files": ["**/page.tsx", "**/layout.tsx", "**/not-found.tsx"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
 }

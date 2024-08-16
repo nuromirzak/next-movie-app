@@ -1,0 +1,144 @@
+.container {
+    color: white;
+}
+
+.header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.poster {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.headerInfo {
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.altTitle {
+    font-size: 1.5rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: #888;
+}
+
+.ratings {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    background-color: #ffa31a;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.listItem {
+    background-color: #ffa31a;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.persons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.person {
+    text-align: center;
+}
+
+.personPhoto {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.personName {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.personRole {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.factsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.factItem {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.spoiler {
+    color: transparent;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.spoiler:hover {
+    color: inherit;
+    text-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .poster {
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+    }
+
+    .persons {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
