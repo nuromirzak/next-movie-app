@@ -1,10 +1,16 @@
 import styles from "./Page.module.css";
 import Link from "next/link";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "About",
+    description: "Learn more about this project and how you can contribute.",
+};
 
 export default function AboutPage() {
     return (
         <div className={styles.about}>
-            <h1 className={styles.title}>About Me and This Project</h1>
+            <h1 className={styles.title}>About</h1>
 
             <section className={styles.section}>
                 <h2 className={styles.sectionTitle}>About This Project</h2>

@@ -3,6 +3,26 @@ import {movieService} from "@/app/services/movieService";
 import React from "react";
 import {MovieGrid} from "@/app/components/MovieGrid";
 import {Pagination} from "@/app/components/Pagination";
+import {Metadata} from "next";
+
+export async function generateMetadata(
+    props: IPageProps
+): Promise<Metadata> {
+    const type = props.searchParams.type ? String(props.searchParams.type) : undefined;
+    const query = props.searchParams.query ? String(props.searchParams.query) : undefined;
+
+    let title = "Popular Movies";
+    if (query) {
+        title = `Search results for "${query}"`;
+    } else if (type) {
+        title = `${type} Movies`;
+    }
+
+    return {
+        title: title,
+        description: "Browse our collection of popular movies",
+    };
+}
 
 export default async function Home(props: IPageProps) {
     const page = props.searchParams.page ? String(props.searchParams.page) : "1";
